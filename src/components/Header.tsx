@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { GenreResponseProps } from './SideBar';
+
 import { api } from '../services/api';
 
 import '../styles/header.scss';
 
-type HeaderProps = {
+interface HeaderProps {
   selectedGenreId: number;
-};
+}
 
 export function Header({ selectedGenreId }: HeaderProps) {
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>(

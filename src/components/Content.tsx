@@ -17,9 +17,9 @@ interface MovieProps {
   Runtime: string;
 }
 
-type ContentProps = {
+interface ContentProps {
   selectedGenreId: number;
-};
+}
 
 export function Content({ selectedGenreId }: ContentProps) {
   const [movies, setMovies] = useState<MovieProps[]>([]);
